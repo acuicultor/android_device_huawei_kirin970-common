@@ -23,6 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 ifeq ($(TARGET_PRODUCT),lineage_berkeley)
 DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 endif
 
@@ -74,6 +75,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.version.all_codenames=$(PLATFORM_VERSION_ALL_CODENAMES) \
     ro.build.version.codename=$(PLATFORM_VERSION_CODENAME) \
     ro.build.version.huawei=8.0.0 \
+    ro.build.version.huawei=8.1.0 \
     ro.build.version.release=$(PLATFORM_VERSION) \
     ro.build.version.sdk=$(PLATFORM_SDK_VERSION)
 
