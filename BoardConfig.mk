@@ -50,6 +50,7 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 
 # Add fix for common JACK issues
 ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx5120m
