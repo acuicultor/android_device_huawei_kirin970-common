@@ -15,7 +15,6 @@
 #
 
 $(call inherit-product-if-exists, vendor/huawei/berkeley/berkeley-vendor.mk)
-$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -40,6 +39,7 @@ endif
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.kirin970.rc \
+    init.kirin970.ab.rc \
     init.kirin970.environ.rc
 
 # Display
@@ -78,6 +78,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.version.huawei=8.1.0 \
     ro.build.version.release=$(PLATFORM_VERSION) \
     ro.build.version.sdk=$(PLATFORM_SDK_VERSION)
+
+# Release tools
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/releasetools/releasetools.kirin970.sh:install/bin/releasetools.kirin970.sh
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
