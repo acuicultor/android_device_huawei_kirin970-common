@@ -31,6 +31,14 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
+# Kernel
+BOARD_KERNEL_IMAGE_NAME := Image
+TARGET_NO_KERNEL := false
+TARGET_PREBUILT_KERNEL := /dev/null
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -47,6 +55,12 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3707764736
 
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.kirin970
+
+# Release tools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
