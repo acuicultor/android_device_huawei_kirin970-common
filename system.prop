@@ -9,3 +9,6 @@ sys.fpnav.enabled=0
 
 # Perf
 ro.vendor.qti.sys.fw.bg_apps_limit=60
+
+# Set lcd_density
+ro.sf.lcd_density=420
