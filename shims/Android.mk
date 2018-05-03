@@ -12,7 +12,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_berkeley.mk
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := hisupl.c
+
+LOCAL_MODULE := libshims_hisupl
+LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := libhardware liblog
+
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
