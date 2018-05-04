@@ -71,3 +71,8 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 
 # Add fix for common JACK issues
 ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx5120m
+
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib64/libdisplayengineservice.so|libshims_hwsmartdisplay_jni.so \
+    /system/lib64/libhwsmartdisplay_jni.so|libshims_hwsmartdisplay_jni.so
