@@ -14,5 +14,12 @@ ro.vendor.qti.sys.fw.bg_apps_limit=60
 # Set lcd_density
 ro.sf.lcd_density=420
 
+# Cloudflare DNS
+net.rmnet0.dns1=1.1.1.1
+net.rmnet0.dns2=1.0.0.1
+net.dns1=1.1.1.1
+net.dns2=1.0.0.1
+
+
 # Radio
 ro.telephony.ril.config=huaweiSignalStrength
