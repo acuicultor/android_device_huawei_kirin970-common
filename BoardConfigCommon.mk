@@ -74,3 +74,6 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib64/libdisplayenginesvc_1_0.so|libshims_hwsmartdisplay_jni.so \
     /system/lib64/libdisplayenginesvc_1_1.so|libshims_hwsmartdisplay_jni.so \
     /system/lib64/libhwsmartdisplay_jni.so|libshims_hwsmartdisplay_jni.so
+
+DEVICE_MANIFEST_FILE := device/huawei/berkeley/manifest.xml
+DEVICE_MATRIX_FILE := device/huawei/berkeley/compatibility_matrix.xml
