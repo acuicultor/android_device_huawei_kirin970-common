@@ -73,7 +73,8 @@ ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx5120m
 TARGET_LD_SHIM_LIBS := \
     /system/lib64/libdisplayenginesvc_1_0.so|libshims_hwsmartdisplay_jni.so \
     /system/lib64/libdisplayenginesvc_1_1.so|libshims_hwsmartdisplay_jni.so \
-    /system/lib64/libhwsmartdisplay_jni.so|libshims_hwsmartdisplay_jni.so
+    /system/lib64/libhwsmartdisplay_jni.so|libshims_hwsmartdisplay_jni.so \
+    /vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service|libshims_hisupl.so
 
 DEVICE_MANIFEST_FILE := device/huawei/kirin970-common/manifest.xml
 DEVICE_MATRIX_FILE := device/huawei/kirin970-common/compatibility_matrix.xml
